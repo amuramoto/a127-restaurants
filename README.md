@@ -1,1 +1,1 @@
-# a127-restaurants
+Skeleton project for Apigee-127
