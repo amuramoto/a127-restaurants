@@ -33,6 +33,11 @@ x-a127-services:
       timeUnit: hour
       interval: 1
       allow: 2
+  spikearrest:
+    provider: "volos-spikearrest-memory"
+    options:
+      timeUnit: "minute"
+      allow: 30
   oauth2:
     provider: volos-oauth-apigee
     options:
