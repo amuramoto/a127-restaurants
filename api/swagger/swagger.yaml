@@ -96,6 +96,7 @@ paths:
       cache: {}
       quota: {}
       analytics: {}
+      spikearrest: {}
     get:
       description: Returns a list of restaurants
       # used as the method name of the controller
