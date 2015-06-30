@@ -137,7 +137,7 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
-  /reviews:
+  /restaurants/{id}/reviews:
     # binds a127 app logic to a route
     x-swagger-router-controller: reviews
     x-a127-apply: {}
@@ -147,7 +147,7 @@ paths:
       operationId: getReviews
       parameters:
         - name: id
-          in: query
+          in: path
           description: The restID of the restaurant to retrieve reviews for
           required: true
           type: number
@@ -162,6 +162,10 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /reviews:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: reviews
+    x-a127-apply: {}
     post:
       description: Returns a list of reviews
       # used as the method name of the controller
