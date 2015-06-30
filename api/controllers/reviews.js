@@ -11,7 +11,7 @@ function getReviews (req, res) {
 		if (error) {
 			res.send(error);
 		} else {
-			res.send(body)
+			res.send(JSON.parse(body).entities)
 		}
 	});
 }
