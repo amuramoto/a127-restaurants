@@ -40,11 +40,11 @@ function getRestaurantById (req, res) {
 					});
 				},
 				function (reviews, callback) {
-					var l = reviews.entities.length;
+					var l = reviews.length;
           var aggregate = 0;
           var i;
           for (i = 0; i < l; i++) {
-              aggregate += reviews.entities[i].rating;
+              aggregate += reviews[i].rating;
           }
           aggregate = {
               aggregate: +(aggregate / i).toFixed(2)
