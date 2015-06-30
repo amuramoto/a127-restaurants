@@ -22,7 +22,7 @@ function getRestaurantById (req, res) {
 		restaurant: function (callback) {
 			request('http://api.usergrid.com/alexm/sandbox/restaurants?ql=restID=' + id, function (error, response, body) {
 				if (error) {
-          callback(error);
+          				callback(error);
 				} else {
 					callback(null, JSON.parse(body));
 				}
@@ -31,9 +31,9 @@ function getRestaurantById (req, res) {
 		reviews: function (callback) {
 			async.waterfall([
 				function (callback) {
-					request('http://api.usergrid.com/alexm/sandbox/reviews?id=' + id, function (error, response, body) {
+					request('http://127.0.0.1:10010/restaurants/' + id + '/reviews', function (error, response, body) {
 						if (error) {
-              callback(error);
+              						callback(error);
 						} else {
 							callback(null, JSON.parse(body));
 						}
